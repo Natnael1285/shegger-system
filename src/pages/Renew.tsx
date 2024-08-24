@@ -8,7 +8,7 @@ const data = {
   details: "Successfully completed the Advanced React PDF Course.",
 };
 
-function PdfPage() {
+function Renew() {
   return (
     <>
       <div>
@@ -28,7 +28,7 @@ function PdfPage() {
       <CertificatePDF {...data} />;
       <div className="mt-4 mb-5 flex flex-row space-x-7 justify-center ">
         <div>
-          <Link to="/registration2">
+          <Link to="/certificate">
             <Button
               variant="contained"
               style={{ width: "450px" }} // Set the desired width in pixels
@@ -46,7 +46,7 @@ function PdfPage() {
           </Link>
         </div>
         <div>
-          <Link to="/certificate/:id">
+          <Link to="/renew/:id">
             <Button
               variant="contained"
               style={{ width: "450px" }} // Set the desired width in pixels
@@ -58,7 +58,7 @@ function PdfPage() {
                 },
               }}
             >
-              Register
+              Renew
             </Button>
           </Link>
         </div>
@@ -67,4 +67,4 @@ function PdfPage() {
   );
 }
 
-export default PdfPage;
+export default Renew;

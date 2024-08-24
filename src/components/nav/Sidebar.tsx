@@ -42,10 +42,7 @@ function Sidebar() {
         >
           <span className="ml-3">Report</span>
         </Link>
-        <Link
-          to="/logout"
-          className="flex items-center pl-6 py-2 hover:bg-green-700"
-        >
+        <Link to="/" className="flex items-center pl-6 py-2 hover:bg-green-700">
           <span className="ml-3">Logout</span>
         </Link>
       </nav>

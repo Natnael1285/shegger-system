@@ -1,14 +1,8 @@
 import Button from "@mui/material/Button";
-import CertificatePDF from "../components/pdf/Generator";
 import { Link } from "react-router-dom";
+import MyDocument from "../components/pdf/Mydocument";
 
-const data = {
-  name: "Jane Smith",
-  date: "August 15, 2024",
-  details: "Successfully completed the Advanced React PDF Course.",
-};
-
-function PdfPage() {
+function View() {
   return (
     <>
       <div>
@@ -25,10 +19,11 @@ function PdfPage() {
           </header>
         </div>
       </div>
-      <CertificatePDF {...data} />;
-      <div className="mt-4 mb-5 flex flex-row space-x-7 justify-center ">
+
+      <div className="mt-4 mb-5 flex flex-col h-full gap-8 space-x-7 justify-center ">
+        <MyDocument />
         <div>
-          <Link to="/registration2">
+          <Link to="/certificate">
             <Button
               variant="contained"
               style={{ width: "450px" }} // Set the desired width in pixels
@@ -45,26 +40,9 @@ function PdfPage() {
             </Button>
           </Link>
         </div>
-        <div>
-          <Link to="/certificate/:id">
-            <Button
-              variant="contained"
-              style={{ width: "450px" }} // Set the desired width in pixels
-              sx={{
-                backgroundColor: "#1c623c",
-                ":hover": {
-                  backgroundColor: "#1c623c",
-                  opacity: "0.8",
-                },
-              }}
-            >
-              Register
-            </Button>
-          </Link>
-        </div>
       </div>
     </>
   );
 }
 
-export default PdfPage;
+export default View;

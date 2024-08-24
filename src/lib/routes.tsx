@@ -9,6 +9,8 @@ import Login from "../pages/Login";
 import Sidebar from "../components/nav/Sidebar";
 import Registration2 from "../pages/Registration2";
 import PdfPage from "../pages/PdfPage";
+import Renew from "../pages/Renew";
+import View from "../pages/View";
 
 const AppRoutes = () => {
   const location = useLocation();
@@ -32,6 +34,8 @@ const AppRoutes = () => {
           <Route path="/logout" element={<Logout />} />
           <Route path="/certificate/:id" element={<PdfPage />} />
           <Route path="/registration2" element={<Registration2 />} />
+          <Route path="" element={<Renew />} />
+          <Route path="/view/:id" element={<View />} />
         </Routes>
       </main>
     </div>

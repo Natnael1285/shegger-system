@@ -2,6 +2,7 @@ import { useState, ChangeEvent } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import Badge from "../components/badge/badge";
 import Button from "@mui/material/Button";
+import { useNavigate } from "react-router-dom";
 
 interface CertificateData {
   id: number;
@@ -56,6 +57,7 @@ const sampleData: CertificateData[] = [
 ];
 
 function Certificate() {
+  const route = useNavigate();
   const [activeSearch, setActiveSearch] =
     useState<CertificateData[]>(sampleData);
 
@@ -138,6 +140,9 @@ function Certificate() {
                             opacity: "0.8",
                           },
                         }}
+                        onClick={() => {
+                          route("/view/" + item.id);
+                        }}
                       >
                         View
                       </Button>
@@ -149,6 +154,9 @@ function Certificate() {
                             backgroundColor: "#14532D",
                             opacity: "0.8",
                           },
+                        }}
+                        onClick={() => {
+                          route("/renew/" + item.id);
                         }}
                       >
                         Renew
