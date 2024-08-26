@@ -1,5 +1,6 @@
 // import Title from "../components/header/title";
 
+import SheggarLogo from "./../assets/Sheger logo.png";
 function Logout() {
   return (
     <div className="bg-[#E9F0EC] w-full h-full">
@@ -8,7 +9,7 @@ function Logout() {
           <div className="flex items-center space-x-4">
             <div className="text-black">Helen Guta</div>
             <img
-              src="/src/assets/react.svg"
+              src={SheggarLogo}
               alt="Profile"
               className="h-10 w-10 rounded-full"
             />

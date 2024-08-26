@@ -1,5 +1,6 @@
 import Button from "@mui/material/Button/Button";
 import TextField from "@mui/material/TextField";
+import SheggarLogo from "./../assets/Sheger logo.png";
 
 function Setting() {
   function handleOnChange() {
@@ -13,7 +14,7 @@ function Setting() {
           <div className="flex items-center space-x-4">
             <div className="text-black">Helen Guta</div>
             <img
-              src="/src/assets/react.svg"
+              src={SheggarLogo}
               alt="Profile"
               className="h-10 w-10 rounded-full"
             />

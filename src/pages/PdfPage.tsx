@@ -1,6 +1,7 @@
 import Button from "@mui/material/Button";
 import CertificatePDF from "../components/pdf/Generator";
 import { Link } from "react-router-dom";
+import SheggarLogo from "./../assets/Sheger logo.png";
 
 const data = {
   name: "Jane Smith",
@@ -17,7 +18,7 @@ function PdfPage() {
             <div className="flex items-center space-x-4">
               <div className="text-black">Helen Guta</div>
               <img
-                src="/src/assets/react.svg"
+                src={SheggarLogo}
                 alt="Profile"
                 className="h-10 w-10 rounded-full"
               />

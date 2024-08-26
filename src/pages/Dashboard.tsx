@@ -2,6 +2,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Barchart from "../components/charts/bar";
 import Stock from "../components/charts/stocx";
+import SheggarLogo from "./../assets/Sheger logo.png";
 
 function Dashboard() {
   const cardsContent = [
@@ -55,7 +56,7 @@ function Dashboard() {
           <div className="flex items-center space-x-4">
             <div className="text-black">Helen Guta</div>
             <img
-              src="/src/assets/react.svg"
+              src={SheggarLogo}
               alt="Profile"
               className="h-10 w-10 rounded-full"
             />
