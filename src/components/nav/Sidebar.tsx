@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import "../../assets/Sheger logo.png";
+import SheggarLogo from "./../../assets/Sheger logo.png";
 
 function Sidebar() {
   return (
     <div className="fixed z-50 left-0 top-0 bottom-0 w-64 bg-green-900 text-white flex flex-col overflow-hidden h-screen ">
       <div className="flex items-center justify-center h-20 border-b border-gray-700">
         <img
-          src="/src/assets/Sheger logo.png"
+          src={SheggarLogo}
           alt="Logo"
           className="h-fit w-36 object-contain"
         />
