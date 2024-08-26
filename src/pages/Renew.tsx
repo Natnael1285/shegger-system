@@ -1,6 +1,6 @@
 import Button from "@mui/material/Button";
 import CertificatePDF from "../components/pdf/Generator";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import SheggarLogo from "./../assets/Sheger logo.png";
 
 const data = {
@@ -9,7 +9,8 @@ const data = {
   details: "Successfully completed the Advanced React PDF Course.",
 };
 
-function Renew({ id }: { id: string }) {
+function Renew() {
+  const { id } = useParams();
   return (
     <>
       <div>

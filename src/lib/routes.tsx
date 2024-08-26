@@ -34,7 +34,7 @@ const AppRoutes = () => {
           <Route path="/logout" element={<Logout />} />
           <Route path="/certificate/:id" element={<PdfPage />} />
           <Route path="/registration2" element={<Registration2 />} />
-          <Route path="" element={<Renew />} />
+          <Route path="/renew/:id" element={<Renew />} />
           <Route path="/view/:id" element={<View />} />
         </Routes>
       </main>
