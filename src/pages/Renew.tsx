@@ -9,7 +9,7 @@ const data = {
   details: "Successfully completed the Advanced React PDF Course.",
 };
 
-function Renew() {
+function Renew({ id }: { id: string }) {
   return (
     <>
       <div>
@@ -29,7 +29,7 @@ function Renew() {
       <CertificatePDF {...data} />;
       <div className="mt-4 mb-5 flex flex-row space-x-7 justify-center ">
         <div>
-          <Link to="/certificate">
+          <Link to={`/certificate/${id}`}>
             <Button
               variant="contained"
               style={{ width: "450px" }} // Set the desired width in pixels
