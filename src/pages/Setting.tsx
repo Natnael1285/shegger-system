@@ -1,27 +1,14 @@
-// import Title from "../components/header/title";
-
 import Button from "@mui/material/Button/Button";
 import TextField from "@mui/material/TextField";
-import { useState } from "react";
 
 function Setting() {
-  const [state, setState] = useState("ready");
-  const [file, setFile] = useState<File | undefined>();
-  async function handleOnSubmit(e: React.SyntheticEvent) {
-    e.preventDefault();
-    console.log("file", file);
-    setState("sent");
+  function handleOnChange() {
+    // No parameters needed as `e` is not used
   }
-  function handleOnChange(e: React.FormEvent<HTMLInputElement>) {
-    const target = e.target as HTMLInputElement & {
-      files: any;
-      FileList: any;
-    };
-    setFile(target.files[0]);
-  }
+
   return (
     <div className="bg-[#E9F0EC] w-full h-full">
-      <div className="bg-[#696868] h-[70px] w-full ">
+      <div className="bg-[#696868] h-[70px] w-full">
         <header className="flex justify-end items-center my-auto h-full px-6">
           <div className="flex items-center space-x-4">
             <div className="text-black">Helen Guta</div>
@@ -34,10 +21,10 @@ function Setting() {
         </header>
       </div>
       <div className="border-[1px] w-[700px] border-black p-5 mx-auto mt-7 rounded-2xl bg-[#f6f5f5]">
-        <p className="font-bold text-xl text-center ">Update profile</p>
-        <div className="justify-between flex flex-row px-20 gap-20 mt-3 ">
-          <div className=" flex flex-col pt-7  w-full">
-            <p className="font-bold text-sm mb-2 ">Old User Name </p>
+        <p className="font-bold text-xl text-center">Update profile</p>
+        <div className="justify-between flex flex-row px-20 gap-20 mt-3">
+          <div className="flex flex-col pt-7 w-full">
+            <p className="font-bold text-sm mb-2">Old User Name</p>
             <TextField
               type="text"
               variant="outlined"
@@ -46,8 +33,8 @@ function Setting() {
               }}
             />
           </div>
-          <div className=" flex flex-col pt-7 w-full">
-            <p className="font-bold text-sm  mb-2">New User Name </p>
+          <div className="flex flex-col pt-7 w-full">
+            <p className="font-bold text-sm mb-2">New User Name</p>
             <TextField
               type="text"
               variant="outlined"
@@ -58,8 +45,8 @@ function Setting() {
           </div>
         </div>
         <div className="justify-between flex flex-row px-20 gap-20 mt-2">
-          <div className=" flex flex-col pt-7  w-full">
-            <p className="font-bold text-sm mb-2 ">Old Password </p>
+          <div className="flex flex-col pt-7 w-full">
+            <p className="font-bold text-sm mb-2">Old Password</p>
             <TextField
               type="password"
               variant="outlined"
@@ -68,10 +55,10 @@ function Setting() {
               }}
             />
           </div>
-          <div className=" flex flex-col pt-7 w-full">
-            <p className="font-bold text-sm  mb-2">New Password </p>
+          <div className="flex flex-col pt-7 w-full">
+            <p className="font-bold text-sm mb-2">New Password</p>
             <TextField
-              type="Password"
+              type="password"
               variant="outlined"
               sx={{
                 backgroundColor: "white",
@@ -104,6 +91,3 @@ function Setting() {
 }
 
 export default Setting;
-function setState(arg0: string) {
-  throw new Error("Function not implemented.");
-}
