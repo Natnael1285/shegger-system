@@ -3,14 +3,12 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import { Link } from "react-router-dom";
 
+import SheggarLogo from "./../../assets/Sheger logo.png";
+
 const LoginForm = () => {
   return (
     <div className="flex flex-col w-1/4 mx-auto gap-4">
-      <img
-        src="src\assets\Sheger logo.png"
-        alt=""
-        className="w-32 object-contain mx-auto"
-      />
+      <img src={SheggarLogo} alt="" className="w-32 object-contain mx-auto" />
 
       <p>Username</p>
       <TextField type="text" variant="outlined" />
